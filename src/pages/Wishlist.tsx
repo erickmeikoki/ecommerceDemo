@@ -12,7 +12,7 @@ import { useWishlist } from "../context/WishlistContext";
 import { ProductCard } from "../components/products/ProductCard";
 import { Link as RouterLink } from "react-router-dom";
 
-export const Wishlist: React.FC = () => {
+const Wishlist: React.FC = () => {
   const { wishlistItems, removeFromWishlist, clearWishlist } = useWishlist();
 
   if (wishlistItems.length === 0) {
@@ -62,3 +62,5 @@ export const Wishlist: React.FC = () => {
     </Container>
   );
 };
+
+export default Wishlist;

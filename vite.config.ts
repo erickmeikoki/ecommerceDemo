@@ -13,6 +13,12 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
+    commonjsOptions: {
+      include: [/react-hook-form/, /node_modules/],
+    },
+  },
+  optimizeDeps: {
+    include: ["react-hook-form"],
   },
   server: {
     port: 3000,

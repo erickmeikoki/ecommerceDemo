@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import theme from "./theme";
 import { CartProvider } from "./context/CartContext";
@@ -28,15 +29,17 @@ if ("serviceWorker" in navigator) {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ErrorBoundary>
-      <ChakraProvider theme={theme}>
-        <CartProvider>
-          <WishlistProvider>
-            <ComparisonProvider>
-              <App />
-            </ComparisonProvider>
-          </WishlistProvider>
-        </CartProvider>
-      </ChakraProvider>
+      <Router>
+        <ChakraProvider theme={theme}>
+          <CartProvider>
+            <WishlistProvider>
+              <ComparisonProvider>
+                <App />
+              </ComparisonProvider>
+            </WishlistProvider>
+          </CartProvider>
+        </ChakraProvider>
+      </Router>
     </ErrorBoundary>
   </React.StrictMode>
 );
