@@ -1,24 +1,29 @@
-# Serverless E-commerce App
+# E-commerce Store
 
-A modern e-commerce application built with React, TypeScript, and Chakra UI. This application demonstrates a serverless architecture with a mock API for product data and cart management.
+A modern, responsive e-commerce application built with React, TypeScript, and Chakra UI. This project demonstrates a full-featured online store with product browsing, cart management, wishlist functionality, and more.
 
 ## Features
 
-- Product listing and details
-- Shopping cart functionality
-- Checkout process
-- Responsive design
-- Modern UI with Chakra UI
-- Type-safe development with TypeScript
+- 🛍️ Product browsing and filtering
+- 🔍 Advanced search functionality
+- 🛒 Shopping cart management
+- ❤️ Wishlist functionality
+- 🔄 Product comparison
+- 👤 User authentication
+- 📱 Responsive design
+- ⚡ Offline support with PWA
+- 🚀 Serverless architecture
 
 ## Tech Stack
 
-- React
-- TypeScript
-- Chakra UI
-- React Router
-- React Query
-- Vite
+- **Frontend Framework**: React 18
+- **Language**: TypeScript
+- **UI Library**: Chakra UI
+- **State Management**: React Context API
+- **Data Fetching**: Axios
+- **Routing**: React Router v6
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
 ## Getting Started
 
@@ -32,8 +37,8 @@ A modern e-commerce application built with React, TypeScript, and Chakra UI. Thi
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd ecommerce
+git clone https://github.com/erickmeikoki/ecommerceDemo.git
+cd ecommerceDemo
 ```
 
 2. Install dependencies:
@@ -52,40 +57,56 @@ npm run dev
 yarn dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+The application will be available at `http://localhost:5173`
 
 ## Project Structure
 
 ```
 src/
-├── components/       # Reusable UI components
-│   ├── layout/      # Layout components
-│   ├── product/     # Product-related components
-│   ├── cart/        # Cart-related components
-│   └── checkout/    # Checkout-related components
-├── context/         # React context providers
-├── pages/           # Page components
-├── services/        # API services
-├── types/           # TypeScript type definitions
-└── utils/           # Utility functions
+├── components/         # Reusable UI components
+│   ├── common/        # Common components
+│   ├── layout/        # Layout components
+│   ├── products/      # Product-related components
+│   └── lazy/          # Lazy-loaded components
+├── context/           # React Context providers
+├── hooks/             # Custom React hooks
+├── pages/             # Page components
+├── services/          # API services
+└── theme.ts           # Chakra UI theme configuration
 ```
 
-## Development
+## API Integration
 
-- The application uses a mock API service for product data and cart operations
-- All state management is handled through React Context
-- The UI is built with Chakra UI components
-- Routing is managed with React Router
-- Data fetching is handled with React Query
+The application uses the FakeStore API for product data:
+
+- Base URL: `https://fakestoreapi.com`
+- Endpoints:
+  - Products: `/products`
+  - Categories: `/products/categories`
+  - Single Product: `/products/{id}`
+
+## Deployment
+
+The application is configured for deployment on Vercel. To deploy:
+
+1. Push your changes to the main branch
+2. Vercel will automatically deploy the latest version
+3. Visit your Vercel dashboard to manage deployments
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [FakeStore API](https://fakestoreapi.com) for providing the product data
+- [Chakra UI](https://chakra-ui.com) for the component library
+- [Vercel](https://vercel.com) for hosting and deployment
