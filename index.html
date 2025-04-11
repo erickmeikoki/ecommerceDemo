@@ -15,9 +15,10 @@
     <script type="module" src="/src/main.tsx"></script>
     <script>
       if ("serviceWorker" in navigator) {
+        const swUrl = `${window.location.origin}/service-worker.js`;
         window.addEventListener("load", () => {
           navigator.serviceWorker
-            .register("/service-worker.js")
+            .register(swUrl)
             .then((registration) => {
               console.log(
                 "ServiceWorker registration successful with scope: ",
@@ -25,7 +26,7 @@
               );
             })
             .catch((error) => {
-              console.log("ServiceWorker registration failed: ", error);
+              console.error("ServiceWorker registration failed: ", error);
             });
         });
       }

@@ -87,7 +87,11 @@ The application uses the FakeStore API for product data:
 
 ## Deployment
 
-The application is configured for deployment on Vercel. To deploy:
+The application is deployed on Vercel and can be accessed at:
+
+- [https://ecommerce-snowy-three.vercel.app/](https://ecommerce-snowy-three.vercel.app/)
+
+To deploy your own version:
 
 1. Push your changes to the main branch
 2. Vercel will automatically deploy the latest version

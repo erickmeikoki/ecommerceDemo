@@ -1,33 +1,52 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "continue": true
-    },
-    {
-      "src": "/service-worker.js",
-      "headers": { "cache-control": "no-cache" },
-      "continue": true
-    },
-    {
-      "src": "/manifest.json",
-      "headers": { "cache-control": "no-cache" },
-      "continue": true
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+	"version": 2,
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@vercel/static-build",
+			"config": {
+				"distDir": "dist"
+			}
+		}
+	],
+	"routes": [
+		{
+			"src": "/static/(.*)",
+			"headers": {
+				"cache-control": "public, max-age=31536000, immutable"
+			},
+			"dest": "/static/$1"
+		},
+		{
+			"src": "^/manifest.json",
+			"headers": {
+				"Content-Type": "application/manifest+json",
+				"cache-control": "public, max-age=0, must-revalidate"
+			},
+			"dest": "/manifest.json"
+		},
+		{
+			"src": "/service-worker.js",
+			"headers": {
+				"cache-control": "public, max-age=0, must-revalidate"
+			},
+			"dest": "/service-worker.js"
+		},
+		{
+			"src": ".*\\.js$",
+			"headers": {
+				"Content-Type": "text/javascript"
+			}
+		},
+		{
+			"src": ".*\\.mjs$",
+			"headers": {
+				"Content-Type": "text/javascript"
+			}
+		},
+		{
+			"src": "/(.*)",
+			"dest": "/index.html"
+		}
+	]
 }
