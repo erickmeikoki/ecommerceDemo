@@ -1,116 +1,71 @@
-# E-commerce Store
+# E-commerce Demo
 
-A modern, responsive e-commerce application built with React, TypeScript, and Chakra UI. This project demonstrates a full-featured online store with product browsing, cart management, wishlist functionality, and more.
+A modern e-commerce application built with React, TypeScript, and Supabase.
 
 ## Features
 
-- 🛍️ Product browsing and filtering
-- 🔍 Advanced search functionality
-- 🛒 Shopping cart management
-- ❤️ Wishlist functionality
-- 🔄 Product comparison
-- 👤 User authentication
-- 📱 Responsive design
-- ⚡ Offline support with PWA
-- 🚀 Serverless architecture
+- User authentication with Supabase
+- Product browsing and searching
+- Shopping cart functionality
+- Wishlist management
+- Responsive design with Chakra UI
 
 ## Tech Stack
 
-- **Frontend Framework**: React 18
-- **Language**: TypeScript
-- **UI Library**: Chakra UI
-- **State Management**: React Context API
-- **Data Fetching**: Axios
-- **Routing**: React Router v6
-- **Build Tool**: Vite
-- **Deployment**: Vercel
+- React
+- TypeScript
+- Supabase (Authentication & Database)
+- Chakra UI
+- React Router
+- Vite
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
+1. Clone the repository
 
 ```bash
-git clone https://github.com/erickmeikoki/ecommerceDemo.git
-cd ecommerceDemo
+git clone https://github.com/yourusername/ecommerce-demo.git
+cd ecommerce-demo
 ```
 
-2. Install dependencies:
+2. Install dependencies
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
-3. Start the development server:
+3. Create a `.env` file in the root directory with your Supabase credentials:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
-
-The application will be available at `http://localhost:5173`
 
 ## Project Structure
 
 ```
 src/
-├── components/         # Reusable UI components
-│   ├── common/        # Common components
-│   ├── layout/        # Layout components
-│   ├── products/      # Product-related components
-│   └── lazy/          # Lazy-loaded components
-├── context/           # React Context providers
-├── hooks/             # Custom React hooks
-├── pages/             # Page components
-├── services/          # API services
-└── theme.ts           # Chakra UI theme configuration
+├── components/     # React components
+├── context/        # React context providers
+├── lib/            # Utility functions and configurations
+├── services/       # API services
+└── types/          # TypeScript type definitions
 ```
-
-## API Integration
-
-The application uses the FakeStore API for product data:
-
-- Base URL: `https://fakestoreapi.com`
-- Endpoints:
-  - Products: `/products`
-  - Categories: `/products/categories`
-  - Single Product: `/products/{id}`
-
-## Deployment
-
-The application is deployed on Vercel and can be accessed at:
-
-- [https://ecommerce-snowy-three.vercel.app/](https://ecommerce-snowy-three.vercel.app/)
-
-To deploy your own version:
-
-1. Push your changes to the main branch
-2. Vercel will automatically deploy the latest version
-3. Visit your Vercel dashboard to manage deployments
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [FakeStore API](https://fakestoreapi.com) for providing the product data
-- [Chakra UI](https://chakra-ui.com) for the component library
-- [Vercel](https://vercel.com) for hosting and deployment
+This project is licensed under the MIT License - see the LICENSE file for details.
